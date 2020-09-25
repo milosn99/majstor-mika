@@ -38,6 +38,8 @@ function validacija()
 
     if(confirm("Da li ste sigurni da treba da dođem u subotu?"))
     {
+        var podaci = $('#FormaNarucivanje').serializeObject();
+        localStorage.setItem('podaciIzForme', JSON.stringify(podaci));
         return true;
     }
     event.preventDefault();
